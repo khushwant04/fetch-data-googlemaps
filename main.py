@@ -1,10 +1,13 @@
+import os
+
 import googlemaps
 import requests
 import pandas as pd
 import openpyxl
 
-# initialize Client 
-api_key = 'API_KEY'
+# initialize Client
+# Read the key from the environment instead of hardcoding it in source.
+api_key = os.environ.get('GOOGLE_MAPS_API_KEY', '')
 
 
 # initialize file
